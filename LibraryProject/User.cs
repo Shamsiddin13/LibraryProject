@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace LibraryProject
 {
@@ -26,6 +27,16 @@ namespace LibraryProject
         public User(string firstname, string lastname, string username) : this(firstname, lastname)
         {
             UserName = username;
+        }
+
+        public override string ToString()
+        {
+            return $"User" +
+                $"\n id : {Id}, " +
+                $"\n FirstName : {FirstName}, " +
+                $"\n LastName : {LastName}, " +
+                $"\n UserName : {UserName}, ";
+
         }
     }
 }

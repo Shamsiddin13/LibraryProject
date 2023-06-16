@@ -15,14 +15,22 @@ namespace LibraryProject
         public string Category { get; set; }
         public Guid? ReaderId { get; set; }
 
-        public Book(string name, string description, string author)
+        public Book(string name, string author)
         {
             Id = Guid.NewGuid();
             Name = name;
-            Description = description;
+            //Description = description;
             Author = author;
             
         }
+        public override string ToString()
+        {
+            return $"Kitob" +
+                $"\n id : {Id}, " +
+                $"\n nomi : {Name}, " +
+                $"\n muallifi : {Author}, " +
+                $"\n Kim o'qiyatpi : {ReaderId}, ";
 
+        }
     }
 }

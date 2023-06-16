@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LibraryProject
 {
-    public abstract class LibraryManagmentCore
+    public class LibraryManagmentCore
     {
         public LibraryStore Store { get; set; }
 
