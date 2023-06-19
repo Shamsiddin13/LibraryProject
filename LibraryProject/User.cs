@@ -10,7 +10,7 @@
 
         public string UserName { get; set; }
 
-        public User(string firstname, string lastname)
+        private User(string firstname, string lastname)
         {
             Id = Guid.NewGuid();
             FirstName = firstname;

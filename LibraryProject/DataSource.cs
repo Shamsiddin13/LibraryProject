@@ -99,17 +99,17 @@
         static DataSource()
         {
             var booksIndex = 0;
-            for (var index = 0; index < 20; index++)
+            for (var index = 0; index < Users.Count; index++)
             {
                 if (index % 4 == 0)
                     continue;
 
                 if (booksIndex == Books.Count - 1)
                     break;
-
+                
                 do
                 {
-                    Books[index].ReaderId = Users[index].Id;
+                    Books[booksIndex].ReaderId = Users[index].Id;
                 } while (booksIndex % 3 != 0);
             }
         }
