@@ -1,17 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml.Linq;
-
-namespace LibraryProject
+﻿namespace LibraryProject
 {
     public class User
     {
         public Guid Id { get; set; }
 
-        public string FirstName { get; set; }    
+        public string FirstName { get; set; }
 
         public string LastName { get; set; }
 
@@ -31,11 +24,11 @@ namespace LibraryProject
 
         public override string ToString()
         {
-            return $"User" +
-                $"\n id : {Id}, " +
-                $"\n FirstName : {FirstName}, " +
-                $"\n LastName : {LastName}, " +
-                $"\n UserName : {UserName}, ";
+            return $"Foydalanuvchi" +
+            $"\n id : {Id}, " +
+                $"\n ismi : {FirstName}, " +
+                $"\n familyasi : {LastName}" +
+                $"\n sharifi : {UserName}\n";
 
         }
     }
