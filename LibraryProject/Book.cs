@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace LibraryProject
+﻿namespace LibraryProject
 {
     public class Book
     {
@@ -15,13 +9,14 @@ namespace LibraryProject
         public string Category { get; set; }
         public Guid? ReaderId { get; set; }
 
-        public Book(string name, string author)
+        public Book(string name, string author, string description, string category)
         {
             Id = Guid.NewGuid();
             Name = name;
-            //Description = description;
             Author = author;
-            
+            Description = description;
+            Category = category;
+
         }
         public override string ToString()
         {
@@ -29,7 +24,7 @@ namespace LibraryProject
                 $"\n id : {Id}, " +
                 $"\n nomi : {Name}, " +
                 $"\n muallifi : {Author}, " +
-                $"\n Kim o'qiyatpi : {ReaderId}, ";
+                $"\n Kim o'qiyatpi : {ReaderId}\n";
 
         }
     }
