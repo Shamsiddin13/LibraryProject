@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace LibraryProject
+﻿namespace LibraryProject
 {
     public class LibraryStore
     {
-        public List<Book> Books {  get; set; }
-        public List<User> Users {  get; set; }
+        public List<Book> Books { get; set; }
+        public List<User> Users { get; set; }
 
         public LibraryStore()
         {
