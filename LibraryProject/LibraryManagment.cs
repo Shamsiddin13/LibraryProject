@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace LibraryProject
+﻿namespace LibraryProject
 {
     internal class LibraryManagment : LibraryManagmentCore
     {
+        private EmailService emailService;
         public void RegisterUser(string firstName, string LastName)
         {
-
+            emailService = new EmailService();
         }
 
         public void RegisterUser(string firstName, string LastName, string userName)
@@ -19,8 +14,8 @@ namespace LibraryProject
 
             foreach (var user in Store.Users)
             {
-                if (user.UserName == userName)
-                    {
+                if (user.Email == userName)
+                {
                     foundUser = true;
                     break;
                 }
@@ -32,8 +27,8 @@ namespace LibraryProject
 
 
             Store.Users.Add(new User(firstName, LastName, userName));
-     
-        
+            emailService.SendEmail(userName);
+
         }
     }
 }

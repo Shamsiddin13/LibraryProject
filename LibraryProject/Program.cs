@@ -1,8 +1,9 @@
 ﻿using LibraryProject;
 
-var LibraryManagment = new LibraryManagmentCore(DataSource.Books, DataSource.Users);
+var LibraryManagment = new LibraryManagment();
+LibraryManagment.RegisterUser("Umarov", "Shamsiddin");
 
-LibraryManagment.DisplayAllBooks();
-LibraryManagment.DisplayAllUsers();
+var emailService = new EmailService();
+emailService.SendEmail("shamsiddinumarov0013@gmail.com");
 
 

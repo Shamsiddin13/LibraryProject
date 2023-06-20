@@ -8,7 +8,7 @@
 
         public string LastName { get; set; }
 
-        public string UserName { get; set; }
+        public string Email { get; set; }
 
         private User(string firstname, string lastname)
         {
@@ -19,7 +19,7 @@
 
         public User(string firstname, string lastname, string username) : this(firstname, lastname)
         {
-            UserName = username;
+            Email = username;
         }
 
         public override string ToString()
@@ -28,7 +28,7 @@
             $"\n id : {Id}, " +
                 $"\n ismi : {FirstName}, " +
                 $"\n familyasi : {LastName}" +
-                $"\n sharifi : {UserName}\n";
+                $"\n sharifi : {Email}\n";
 
         }
     }

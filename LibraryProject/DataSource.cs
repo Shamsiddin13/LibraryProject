@@ -106,7 +106,7 @@
 
                 if (booksIndex == Books.Count - 1)
                     break;
-                
+
                 do
                 {
                     Books[booksIndex].ReaderId = Users[index].Id;
